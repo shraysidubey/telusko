@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>login</title>
+</head>
+<body>
+    <form action="login"method="post">
+        {% csrf_token %}
+
+        <input type="text" name="username" placeholder="User Name"><br>
+        <input type="password" name="password" placeholder="Password"><br>
+        <input type="Submit">
+
+</body>
+    <div>
+            {% for message in messages %}
+            <h3>{{ message }}</h3>
+            {% endfor %}
+
+    </div>
+
+
+</html>
